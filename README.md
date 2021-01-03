@@ -37,7 +37,9 @@ El servicio será levantado en http://localhost:8891.
 
 **POST** 
 ``http://localhost:8891/infopersona``
+
 ``http://localhost:8891/infopersona/guardar``
+
 ``http://localhost:8891/infopersona/eliminar/1024462249``
 
 
@@ -107,7 +109,7 @@ El servicio será levantado en http://localhost:8891.
 **Campos infoPersona**
 ![image](https://user-images.githubusercontent.com/17706660/103491398-b55a8e80-4df1-11eb-9834-749518368d27.png)
 
-**Campos infoPersona**
+**Eureka**
 ![image](https://user-images.githubusercontent.com/17706660/103491401-bb506f80-4df1-11eb-968c-39bb8a679098.png)
 
 **Tabla infoPersona**
