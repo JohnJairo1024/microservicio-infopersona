@@ -35,7 +35,8 @@ El servicio será levantado en http://localhost:8891.
 
 ### Endpoint
 
-**POST** 
+**POST**
+
 ``http://localhost:8891/infopersona``
 
 ``http://localhost:8891/infopersona/guardar``
