@@ -1,63 +1,16 @@
 # microservicio
 
 1. Eureka
-
-
-
-# CO-RECTOR-ADAPTER
-
- 
-
-Proyecto para comunicación con RECTOR
-
- 
-
-## Resources
-
- 
-
-- [STAGING API] "url staging"
-
- 
-
-[![Build Status](https://drone.segurosfalabella.com/api/badges/segurosfalabella/co-rector-adapter/status.svg)](https://drone.segurosfalabella.com/segurosfalabella/co-rector-adapter)
-
- 
-
-URLs:
-
- 
-
-- Staging: "url staging"
-- Production: "url production"
-- Local: http://localhost:3000
-
- 
-
-API para realizar el proceso de venta en rector
-
- 
-
-dependencias base:
-
- 
-
-- gin-gonic ("framework para generar api rest")
-
+2. zuul
+3. infopersona
+4. configuracion
  
 
 ## Requisitos
 
- 
-
-- Go 1.13
-- make 
-- Docker (solo si desea levantarlo con esta herramienta)
-
- 
-
-## Levantar servicio
-
+- Java 8
+- Spring boot
+- Maven
  
 
 ### Ambiente Local
@@ -66,78 +19,27 @@ dependencias base:
 
 Se debe ejecutar los siguientes comandos en una terminal
 
- - sudo make dev-build (esto cosntruye el contenedor)
- - sudo make dev-run (esto ejecuta el contenedor disponibilisando los enpoint correspondientes)
- 
-El servicio será levantado en http://localhost:3000.
+ - mvn clean install (esto cosntruye el contenedor)
+  
+El servicio será levantado en http://localhost:8891.
 
  
-
-### Ambiente Docker
-
- 
-
-Se debe tener los requisitos del instalados previamente.
-
- 
-
-En la raiz del proyecto, crear un .env con las siguientes variables de entorno, modificando los secretos entre corchetes.
-
-
-    ````
-	COUNTRY=[COUNTRY]
-	COMMERCE=[COMMERCE]
-	PRODUCT=[PRODUCT]
-	ENVIRONMENT=[ENVIRONMENT]
-	ORACLE_URL=[ORACLE_URL]
-	USER=[USER]
-	PASSWORD=[PASSWORD]    
-	
-    ````
-
-Se debe ejecutar los siguientes comandos en una terminal
-
- - sudo make dev-build (esto cosntruye el contenedor)
- - sudo make dev-run (esto ejecuta el contenedor disponibilisando los enpoint correspondientes)
-
- 
-El servicio será levantado en http://localhost:3000.
- 
-
 
 ## Herramientas
 
- 
-
-### Logs
-
- 
-
-Para ver los logs que genera el servicio, ingresar al sitio de Kibana y filtrar por los siguientes datos:
+ - Intejji Idea
+ - Postman
+ - h2
 
 
-- appname: co-rector-adapter
-- version: version que desee revisar
-- environment: staging o production
-
- 
-
-### Health
-
- 
-
-El endpoint expuesto para saber el estado de la API es GET / `/health`.
-
- 
-
-##
-
-##
 
 ### Endpoint
 
 **POST** 
-``{url}/api/v1/quote``
+``http://localhost:8891/infopersona``
+``http://localhost:8891/infopersona/guardar``
+``http://localhost:8891/infopersona/eliminar/1024462249``
+
 
 **HEADER:**
 
